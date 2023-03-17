@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录系统</title>
+    <script type="application/javascript" src="/login"></script>
+</head>
+<body>
+<form action="/login" method="post">
+
+    <table>
+        <tbody>
+        <tr>
+            <td>Username</td>
+            <td><input name="username"></td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td><input name="password"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input name="captcha" placeholder="请输入验证码">
+                <img id="captcha-image" onclick="changeCode()" src="/captcha">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button type="submit">提交</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</form>
+
+
+</body>
+<script type="application/javascript">
+    function changeCode() {
+        /*点击刷新验证码*/
+        //加时间戳，防止浏览器利用缓存
+        const src = "/captcha?" + new Date().getTime();
+        document.getElementById('captcha-image').setAttribute('src', src);
+    }
+</script>
+</html>

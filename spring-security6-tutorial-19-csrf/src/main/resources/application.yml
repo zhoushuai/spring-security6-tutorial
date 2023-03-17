@@ -1,0 +1,3 @@
+spring:
+  application:
+    name: spring-securit-tutorial-19-csrf

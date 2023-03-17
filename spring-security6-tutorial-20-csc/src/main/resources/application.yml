@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: spring-security6-tutorial -20-csc
+
+  thymeleaf:
+    enabled: true
+    suffix: .html
+    prefix: classpath:/templates/
+    cache: false
+    encoding: UTF-8

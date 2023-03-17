@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: spring-security6-tutorial-04-captcha
+logging:
+  level:
+    org.springframework.security: debug

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>me.yushuai.tutorial</groupId>
+    <artifactId>spring-security6-tutorial</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>spring-security6-tutorial-01-hello</module>
+        <module>spring-security6-tutorial-02-jpa</module>
+        <module>spring-security6-tutorial-03-jdbc</module>
+        <module>spring-security6-tutorial-09-multiple-sfc</module>
+        <module>spring-security6-tutorial-19-csrf</module>
+        <module>spring-security6-tutorial-20-csc</module>
+        <module>spring-security6-tutorial-21-session-timeout</module>
+        <module>spring-security6-tutorial-08-logout</module>
+        <module>spring-security6-tutorial-22-session-management</module>
+        <module>spring-security6-tutorial-04-captcha</module>
+    </modules>
+
+    <properties>
+        <spring-boot.version>3.0.3</spring-boot.version>
+        <spring-security.version>6.0.2</spring-security.version>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-bom</artifactId>
+                <version>${spring-security.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.18.24</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>

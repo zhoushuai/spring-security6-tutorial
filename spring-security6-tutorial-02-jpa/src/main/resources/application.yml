@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: spring-security6-tutorial-01
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:spring-security-tutorial-01
+    username: default
+    password: 123456
+  h2:
+    console:
+      settings:
+        web-admin-password: 123456
+        web-allow-others: true
+      enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: none
+  sql:
+    init:
+      schema-locations: classpath*:sql/h2/schema.sql
+      data-locations: classpath*:sql/h2/data.sql
+  thymeleaf:
+    mode: HTML
+    prefix: classpath:/templates/
+    suffix: .html
+    enabled: true
+logging:
+  level:
+    org.springframewrok: debug
