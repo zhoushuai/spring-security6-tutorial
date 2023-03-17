@@ -1,1 +1,1 @@
-# spring-security6-tutorial
+# spring security 6.0 tutorial
